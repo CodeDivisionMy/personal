@@ -1,0 +1,28 @@
+<body data-controller="home">
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+  <div class="wrapper">
+    <div id="main">
+      <%= render 'layouts/header' %>
+
+      <section class="content">
+        <div class="slider-container">
+          <ul id="home-slider" class="slider">
+            <li>
+              <%= image_tag '1.jpg' %>
+              <div class="captions">
+                <h2>Slider with Title here</h2>
+                <p>This case study demonstrates the methods I use to approach a single project. I hope it will inspire you to work with me!</p>
+              </div>
+            </li>
+            <li><%= image_tag '2.jpg' %></li>
+            <li><%= image_tag '3.jpg' %></li>
+          </ul>
+        </div>
+      </section>  <!-- .content -->
+    </div>  <!-- #main -->
+  <%= render 'layouts/footer' %>
+  </div> <!-- .wrapper -->
+</body>
