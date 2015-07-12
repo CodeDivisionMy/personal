@@ -30,6 +30,11 @@
           <i class="icon-paper-plane"></i><span>Sign Out</span>
         <% end %>
       </div>
+    <% else %>
+      <div><%= link_to sign_in_path do %>
+          <i class="icon-paper-plane"></i><span>Sign In</span>
+        <% end %>
+      </div>
     <% end %>
 
     <div id="me"><%= image_tag 'person.jpg' %></div>
