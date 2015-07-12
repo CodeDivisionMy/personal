@@ -37,6 +37,14 @@ Rails.application.configure do
   config.assets.raise_runtime_errors = true
 
   config.action_mailer.default_url_options = { host: 'ruby-100997.nitrousapp.com:3000/' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.mandrillapp.com',
+    port:                 587,
+    user_name:            'josh@11th.ventures',
+    password:             'uDaifavtZCAYLKZNpXsUaQ',
+    authentication:       'plain',
+    enable_starttls_auto: true  }
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true

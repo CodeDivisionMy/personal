@@ -3,6 +3,11 @@ class ContactController < ApplicationController
   end
 
   def create
-    #send email
+    #collecting data from form
+    form_data = { name: params[:name], email: params[:email], body: params[:body] }
+    #this sends email
+    ContactMailer.contact_form(form_data).deliver
+
+    redirect_to root_path
   end
 end
