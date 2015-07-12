@@ -23,19 +23,19 @@
       <% end %>
     </div>
 
-    <div><a href="#" id="open-social-menu"><i class="icon-plus"></i></a></div>
-
     <% if signed_in? %>
       <div><%= link_to sign_out_path, method: :delete do %>
-          <i class="icon-paper-plane"></i><span>Sign Out</span>
+          <i class="icon-logout"></i><span>Sign Out</span>
         <% end %>
       </div>
     <% else %>
       <div><%= link_to sign_in_path do %>
-          <i class="icon-paper-plane"></i><span>Sign In</span>
+          <i class="icon-logout"></i><span>Sign In</span>
         <% end %>
       </div>
     <% end %>
+
+    <div><a href="#" id="open-social-menu"><i class="icon-plus"></i></a></div>
 
     <div id="me"><%= image_tag 'person.jpg' %></div>
 
