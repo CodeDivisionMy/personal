@@ -17,3 +17,7 @@
  *= require 'animation'
  *= require_self
  */
+
+.placeholder form label {
+  display: inline;
+}

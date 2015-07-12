@@ -24,7 +24,15 @@
     </div>
 
     <div><a href="#" id="open-social-menu"><i class="icon-plus"></i></a></div>
+
+    <div><%= link_to sign_out_path, method: :delete do %>
+        <i class="icon-paper-plane"></i><span>Sign Out</span>
+      <% end %>
+    </div>
+
     <div id="me"><%= image_tag 'person.jpg' %></div>
+
+
   </nav>
 </footer>  <!-- #navigation -->
 

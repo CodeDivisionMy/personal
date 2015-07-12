@@ -14,16 +14,19 @@ class ProfilesController < ApplicationController
 
   # GET /profiles/new
   def new
+    require_login
     @profile = Profile.new
   end
 
   # GET /profiles/1/edit
   def edit
+    require_login
   end
 
   # POST /profiles
   # POST /profiles.json
   def create
+    require_login
     @profile = Profile.new(profile_params)
 
     if @profile.save
@@ -36,6 +39,7 @@ class ProfilesController < ApplicationController
   # PATCH/PUT /profiles/1
   # PATCH/PUT /profiles/1.json
   def update
+    require_login
     if @profile.update(profile_params)
       redirect_to @profile, notice: 'Profile was successfully updated.'
     else
@@ -46,6 +50,7 @@ class ProfilesController < ApplicationController
   # DELETE /profiles/1
   # DELETE /profiles/1.json
   def destroy
+    require_login
     @profile.destroy
     respond_to do |format|
       format.html { redirect_to profiles_url, notice: 'Profile was successfully destroyed.' }
