@@ -21,3 +21,7 @@
 .placeholder form label {
   display: inline;
 }
+
+.bx-wrapper img {
+  width: 100%;
+}

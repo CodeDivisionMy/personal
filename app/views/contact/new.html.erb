@@ -1,0 +1,35 @@
+<body data-controller="contact">
+    <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+  <div class="wrapper">
+    <div id="main">
+      <%= render 'layouts/header' %>
+      <section class="content">
+        <div class="content-container">
+          <div class="scroller">
+            <h3>Contact me! <small>Drop me an message here!</small></h3>
+              <div class="row">
+                <div class="span11">
+                  <h4>Send me a message!</h4>
+                    <div class="contact-form">
+                      <%= form_tag("/contact", method: "post") do %>
+                        <%= label_tag(:name, "Name") %>
+                        <%= text_field_tag(:name) %>
+                        <%= label_tag(:email, "Email") %>
+                        <%= text_field_tag(:email) %>
+                        <%= label_tag(:body, "Body") %>
+                        <%= text_area_tag(:body) %>
+                        <%= submit_tag("Send!", class: 'button') %>
+                      <% end %>
+                    </div>  <!-- .contact-form -->
+                    <div id="message-sent"><p></p></div>
+                  </div>
+                </div>
+              </div> <!-- .scroller -->
+            </div>  <!-- .content-container -->
+          </section>  <!-- .content -->
+        </div>  <!-- #main -->
+        <%= render 'layouts/footer' %>
+      </div> <!-- .wrapper -->
+</body>

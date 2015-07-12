@@ -1,18 +1,18 @@
 <header id="header">
-  <h1><a href="#"><%= @profile.name %></a></h1>
-  <h2><a href="#"><%= @profile.job_title %></a></h2>
+  <h1><a href="/"><%= @profile.try(:name) || Profile.first.name %></a></h1>
+  <h2><a href="/"><%= @profile.try(:job_title) || Profile.first.job_title %></a></h2>
 
   <a href="#" id="openmenu"><i class="icon-list"></i></a>
   <a href="#" id="closemenu"><i>X</i></a>
 
   <div class="contact-box">
-    <a href="#" id="box-info">
+    <%= link_to contact_path do %>
       <div class="icon-container"><i class="icon-info"></i></div>
       <div class="text-container"><p>Tel. 1515-511-65985 <br>mail@company.com</p></div>
-    </a>
-    <a href="#" id="box-download">
+    <% end %>
+    <a href="https://www.dropbox.com/s/q1478cq1b1trtv5/Teng_Joshua%20Resume.pdf?dl=1" id="box-download">
       <div class="icon-container"><i class="icon-download"></i></div>
-      <div class="text-container"><a href="https://www.dropbox.com/s/q1478cq1b1trtv5/Teng_Joshua%20Resume.pdf?dl=1">Download <br>PDF Resume</a></div>
+      <div class="text-container"><p>Download <br>PDF Resume</p></div>
     </a>
   </div>
 </header>  <!-- #header -->
