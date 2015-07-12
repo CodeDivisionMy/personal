@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  root to: 'profile#show'
+  resources :profiles
+  root to: 'profiles#show'
 end
