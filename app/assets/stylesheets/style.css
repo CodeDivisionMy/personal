@@ -1203,18 +1203,4 @@ h3 small:before {
 .row:after {
     clear: both;
 }
-.row [class*="span"]:first-child {
-    margin-left: 0;
-}
-.span4, .span5, .span6, .span7, .span8 {
-    margin-left: 4%;
-    float: left;
-
-}
-.span4 { width: 32%; }
-.span5 { width: 40%; }
-.span6 { width: 47%; }
-.span7 { width: 56%; }
-.span8 { width: 64%; }
-
 
