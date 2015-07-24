@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150712025149) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "profiles", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -29,7 +32,7 @@ ActiveRecord::Schema.define(version: 20150712025149) do
     t.string   "remember_token",     limit: 128, null: false
   end
 
-  add_index "users", ["email"], name: "index_users_on_email"
-  add_index "users", ["remember_token"], name: "index_users_on_remember_token"
+  add_index "users", ["email"], name: "index_users_on_email", using: :btree
+  add_index "users", ["remember_token"], name: "index_users_on_remember_token", using: :btree
 
 end
